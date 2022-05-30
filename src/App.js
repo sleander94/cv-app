@@ -14,11 +14,15 @@ class App extends React.Component {
         address: '',
         description: '',
       },
+      work: [],
     };
-    this.handleChange.bind(this);
+
+    this.handleJobChange.bind(this);
+    this.handlePersonalChange.bind(this);
+    this.addJob.bind(this);
   }
 
-  handleChange = (e) => {
+  handlePersonalChange = (e) => {
     this.setState({
       [e.target.className]: {
         ...this.state[e.target.className],
@@ -27,11 +31,37 @@ class App extends React.Component {
     });
   };
 
+  handleJobChange = (e) => {
+    let work = [...this.state.work];
+    let job = { ...work[e.target.className] };
+    job[e.target.name] = e.target.value;
+    work[e.target.className] = job;
+    this.setState({ work });
+  };
+
+  addJob = () => {
+    let job = {
+      company: '',
+      title: '',
+      start: '',
+      end: '',
+      description: '',
+    };
+    this.setState({
+      work: [...this.state.work, job],
+    });
+  };
+
   render() {
     return (
       <div className="App">
         <h1>CV - Generator</h1>
-        <Form {...this.state} handleChange={this.handleChange} />
+        <Form
+          {...this.state}
+          handleJobChange={this.handleJobChange}
+          handlePersonalChange={this.handlePersonalChange}
+          addJob={this.addJob}
+        />
         <CV {...this.state} />
       </div>
     );
