@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/Personal.css';
 
 class Personal extends React.Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class Personal extends React.Component {
 
   render() {
     return (
-      <div className="personal">
+      <div className="personalContainer">
         <h3>Personal Information</h3>
         <label htmlFor="name">
           Name:{' '}
@@ -63,6 +64,8 @@ class Personal extends React.Component {
             name="description"
             className="personal"
             placeholder="Additional personal information."
+            rows="4"
+            cols="40"
             value={this.props.personal.description}
             onChange={this.props.handleChange}
           ></textarea>
