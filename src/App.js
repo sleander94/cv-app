@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Form from './components/Form';
+import CV from './components/CV';
 import './styles/App.css';
 
 class App extends React.Component {
@@ -31,6 +32,7 @@ class App extends React.Component {
       <div className="App">
         <h1>CV - Generator</h1>
         <Form {...this.state} handleChange={this.handleChange} />
+        <CV {...this.state} />
       </div>
     );
   }
