@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Personal from './Personal';
+import Work from './Work';
 import '../styles/Form.css';
 
 class Form extends React.Component {
@@ -10,7 +11,15 @@ class Form extends React.Component {
   render() {
     return (
       <form>
-        <Personal {...this.props} handleChange={this.props.handleChange} />
+        <Personal
+          personal={this.props.personal}
+          handlePersonalChange={this.props.handlePersonalChange}
+        />
+        <Work
+          work={this.props.work}
+          handleJobChange={this.props.handleJobChange}
+          addJob={this.props.addJob}
+        />
       </form>
     );
   }
