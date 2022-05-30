@@ -17,7 +17,12 @@ class App extends React.Component {
   }
 
   handleChange = (e) => {
-    this.setState({ personal: { name: e.target.value } });
+    this.setState({
+      [e.target.className]: {
+        ...this.state[e.target.className],
+        [e.target.name]: e.target.value,
+      },
+    });
   };
 
   render() {
