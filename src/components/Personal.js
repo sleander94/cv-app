@@ -18,7 +18,7 @@ class Personal extends React.Component {
             className="personal"
             placeholder="John Doe"
             value={this.props.personal.name}
-            onChange={this.props.handleChange}
+            onChange={this.props.handlePersonalChange}
           ></input>
         </label>
 
@@ -30,7 +30,7 @@ class Personal extends React.Component {
             className="personal"
             placeholder="yourname@email.com"
             value={this.props.personal.email}
-            onChange={this.props.handleChange}
+            onChange={this.props.handlePersonalChange}
           ></input>
         </label>
 
@@ -42,7 +42,7 @@ class Personal extends React.Component {
             className="personal"
             placeholder="(555)555-5555"
             value={this.props.personal.phone}
-            onChange={this.props.handleChange}
+            onChange={this.props.handlePersonalChange}
           ></input>
         </label>
 
@@ -54,7 +54,7 @@ class Personal extends React.Component {
             className="personal"
             placeholder="123 Main St, Town, ST 12345, USA"
             value={this.props.personal.address}
-            onChange={this.props.handleChange}
+            onChange={this.props.handlePersonalChange}
           ></input>
         </label>
 
@@ -67,7 +67,7 @@ class Personal extends React.Component {
             rows="4"
             cols="40"
             value={this.props.personal.description}
-            onChange={this.props.handleChange}
+            onChange={this.props.handlePersonalChange}
           ></textarea>
         </label>
       </div>
