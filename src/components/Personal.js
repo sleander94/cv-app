@@ -36,7 +36,7 @@ class Personal extends React.Component {
         <label htmlFor="phone">
           Phone:{' '}
           <input
-            type="number"
+            type="tel"
             name="phone"
             className="personal"
             placeholder="(555)555-5555"
