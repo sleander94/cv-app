@@ -1,6 +1,7 @@
 import React from 'react';
 import Personal from './Personal';
 import Work from './Work';
+import Education from './Education';
 import '../styles/Form.css';
 
 class Form extends React.Component {
@@ -20,6 +21,10 @@ class Form extends React.Component {
           handleJobChange={this.props.handleJobChange}
           addJob={this.props.addJob}
           removeJob={this.props.removeJob}
+        />
+        <Education
+          education={this.props.education}
+          addSchool={this.props.addSchool}
         />
       </form>
     );
