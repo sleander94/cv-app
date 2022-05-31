@@ -20,13 +20,13 @@ class Form extends React.Component {
           work={this.props.work}
           handleInputChange={this.props.handleInputChange}
           addToArray={this.props.addToArray}
-          removeJob={this.props.removeJob}
+          removeItem={this.props.removeItem}
         />
         <Education
           education={this.props.education}
           handleInputChange={this.props.handleInputChange}
           addToArray={this.props.addToArray}
-          removeSchool={this.props.removeSchool}
+          removeItem={this.props.removeItem}
         />
       </form>
     );

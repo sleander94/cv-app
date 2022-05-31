@@ -13,7 +13,7 @@ class Education extends React.Component {
         key={this.props.education.indexOf(school)}
         number={this.props.education.indexOf(school)}
         handleInputChange={this.props.handleInputChange}
-        removeSchool={this.props.removeSchool}
+        removeItem={this.props.removeItem}
       />
     ));
     return (

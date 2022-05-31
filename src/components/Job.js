@@ -66,7 +66,7 @@ class Job extends React.Component {
         </label>
         <button
           type="button"
-          onClick={() => this.props.removeJob(this.props.number)}
+          onClick={() => this.props.removeItem(this.props.number, 'work')}
         >
           Remove
         </button>

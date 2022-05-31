@@ -20,8 +20,7 @@ class App extends React.Component {
 
     this.handleInputChange.bind(this);
     this.addToArray.bind(this);
-    this.removeJob.bind(this);
-    this.removeSchool.bind(this);
+    this.removeItem.bind(this);
   }
 
   handleInputChange = (type) => (e) => {
@@ -70,31 +69,10 @@ class App extends React.Component {
     });
   };
 
-  removeJob = (n) => {
+  removeItem = (index, array) => {
     this.setState({
-      work: this.state.work.filter((job) => {
-        return job !== this.state.work[n];
-      }),
-    });
-  };
-
-  addSchool = () => {
-    let school = {
-      course: '',
-      school: '',
-      start: '',
-      end: '',
-      description: '',
-    };
-    this.setState({
-      education: [...this.state.education, school],
-    });
-  };
-
-  removeSchool = (n) => {
-    this.setState({
-      education: this.state.education.filter((school) => {
-        return school !== this.state.education[n];
+      [array]: this.state.work.filter((item) => {
+        return item !== this.state[array][index];
       }),
     });
   };
@@ -107,7 +85,7 @@ class App extends React.Component {
           {...this.state}
           handleInputChange={this.handleInputChange}
           addToArray={this.addToArray}
-          removeJob={this.removeJob}
+          removeItem={this.removeItem}
           removeSchool={this.removeSchool}
         />
         <CV {...this.state} />

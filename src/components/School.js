@@ -66,7 +66,7 @@ class School extends React.Component {
         </label>
         <button
           type="button"
-          onClick={() => this.props.removeSchool(this.props.number)}
+          onClick={() => this.props.removeItem(this.props.number, 'education')}
         >
           Remove
         </button>
