@@ -12,7 +12,7 @@ class Work extends React.Component {
         jobInfo={this.props.work[this.props.work.indexOf(job)]}
         key={this.props.work.indexOf(job)}
         number={this.props.work.indexOf(job)}
-        handleJobChange={this.props.handleJobChange}
+        handleInputChange={this.props.handleInputChange}
         removeJob={this.props.removeJob}
       />
     ));

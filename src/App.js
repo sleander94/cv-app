@@ -18,22 +18,34 @@ class App extends React.Component {
       education: [],
     };
 
-    this.handlePersonalChange.bind(this);
-    this.handleJobChange.bind(this);
-    this.handleSchoolChange.bind(this);
+    this.handleInputChange.bind(this);
     this.addJob.bind(this);
     this.removeJob.bind(this);
     this.addSchool.bind(this);
     this.removeSchool.bind(this);
   }
 
-  handlePersonalChange = (e) => {
-    this.setState({
-      [e.target.className]: {
-        ...this.state[e.target.className],
-        [e.target.name]: e.target.value,
-      },
-    });
+  handleInputChange = (type) => (e) => {
+    if (type === 'personal') {
+      this.setState({
+        [e.target.className]: {
+          ...this.state[e.target.className],
+          [e.target.name]: e.target.value,
+        },
+      });
+    } else if (type === 'work') {
+      let work = [...this.state.work];
+      let job = { ...work[e.target.className] };
+      job[e.target.name] = e.target.value;
+      work[e.target.className] = job;
+      this.setState({ work });
+    } else if (type === 'education') {
+      let education = [...this.state.education];
+      let school = { ...education[e.target.className] };
+      school[e.target.name] = e.target.value;
+      education[e.target.className] = school;
+      this.setState({ education });
+    }
   };
 
   addJob = () => {
@@ -57,14 +69,6 @@ class App extends React.Component {
     });
   };
 
-  handleJobChange = (e) => {
-    let work = [...this.state.work];
-    let job = { ...work[e.target.className] };
-    job[e.target.name] = e.target.value;
-    work[e.target.className] = job;
-    this.setState({ work });
-  };
-
   addSchool = () => {
     let school = {
       course: '',
@@ -86,23 +90,13 @@ class App extends React.Component {
     });
   };
 
-  handleSchoolChange = (e) => {
-    let education = [...this.state.education];
-    let school = { ...education[e.target.className] };
-    school[e.target.name] = e.target.value;
-    education[e.target.className] = school;
-    this.setState({ education });
-  };
-
   render() {
     return (
       <div className="App">
         <h1>CV - Generator</h1>
         <Form
           {...this.state}
-          handleJobChange={this.handleJobChange}
-          handlePersonalChange={this.handlePersonalChange}
-          handleSchoolChange={this.handleSchoolChange}
+          handleInputChange={this.handleInputChange}
           addJob={this.addJob}
           removeJob={this.removeJob}
           addSchool={this.addSchool}

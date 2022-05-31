@@ -12,7 +12,7 @@ class Education extends React.Component {
         schoolInfo={this.props.education[this.props.education.indexOf(school)]}
         key={this.props.education.indexOf(school)}
         number={this.props.education.indexOf(school)}
-        handleSchoolChange={this.props.handleSchoolChange}
+        handleInputChange={this.props.handleInputChange}
         removeSchool={this.props.removeSchool}
       />
     ));

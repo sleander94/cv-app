@@ -14,17 +14,17 @@ class Form extends React.Component {
       <form>
         <Personal
           personal={this.props.personal}
-          handlePersonalChange={this.props.handlePersonalChange}
+          handleInputChange={this.props.handleInputChange}
         />
         <Work
           work={this.props.work}
-          handleJobChange={this.props.handleJobChange}
+          handleInputChange={this.props.handleInputChange}
           addJob={this.props.addJob}
           removeJob={this.props.removeJob}
         />
         <Education
           education={this.props.education}
-          handleSchoolChange={this.props.handleSchoolChange}
+          handleInputChange={this.props.handleInputChange}
           addSchool={this.props.addSchool}
           removeSchool={this.props.removeSchool}
         />

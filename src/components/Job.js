@@ -16,7 +16,7 @@ class Job extends React.Component {
             className={this.props.number}
             placeholder="Google"
             value={this.props.jobInfo.company}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleInputChange('work')}
           ></input>
         </label>
         <label htmlFor="title">
@@ -27,7 +27,7 @@ class Job extends React.Component {
             className={this.props.number}
             placeholder="Software Developer"
             value={this.props.jobInfo.title}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleInputChange('work')}
           ></input>
         </label>
         <label htmlFor="start">
@@ -38,7 +38,7 @@ class Job extends React.Component {
             className={this.props.number}
             placeholder="2018"
             value={this.props.jobInfo.start}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleInputChange('work')}
           ></input>
         </label>
         <label htmlFor="end">
@@ -49,7 +49,7 @@ class Job extends React.Component {
             className={this.props.number}
             placeholder="2022"
             value={this.props.jobInfo.end}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleInputChange('work')}
           ></input>
         </label>
         <label htmlFor="description">
@@ -61,7 +61,7 @@ class Job extends React.Component {
             rows="4"
             cols="40"
             value={this.props.jobInfo.description}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleInputChange('work')}
           ></textarea>
         </label>
         <button

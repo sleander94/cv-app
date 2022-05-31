@@ -16,7 +16,7 @@ class School extends React.Component {
             className={this.props.number}
             placeholder="BS Computer Science"
             value={this.props.schoolInfo.course}
-            onChange={this.props.handleSchoolChange}
+            onChange={this.props.handleInputChange('education')}
           ></input>
         </label>
         <label htmlFor="school">
@@ -27,7 +27,7 @@ class School extends React.Component {
             className={this.props.number}
             placeholder="University of Colorado"
             value={this.props.schoolInfo.school}
-            onChange={this.props.handleSchoolChange}
+            onChange={this.props.handleInputChange('education')}
           ></input>
         </label>
         <label htmlFor="start">
@@ -38,7 +38,7 @@ class School extends React.Component {
             className={this.props.number}
             placeholder="2018"
             value={this.props.schoolInfo.start}
-            onChange={this.props.handleSchoolChange}
+            onChange={this.props.handleInputChange('education')}
           ></input>
         </label>
         <label htmlFor="end">
@@ -49,7 +49,7 @@ class School extends React.Component {
             className={this.props.number}
             placeholder="2022"
             value={this.props.schoolInfo.end}
-            onChange={this.props.handleSchoolChange}
+            onChange={this.props.handleInputChange('education')}
           ></input>
         </label>
         <label htmlFor="description">
@@ -61,7 +61,7 @@ class School extends React.Component {
             rows="4"
             cols="40"
             value={this.props.schoolInfo.description}
-            onChange={this.props.handleSchoolChange}
+            onChange={this.props.handleInputChange('education')}
           ></textarea>
         </label>
         <button
