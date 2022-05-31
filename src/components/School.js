@@ -16,7 +16,7 @@ class School extends React.Component {
             className={this.props.number}
             placeholder="BS Computer Science"
             value={this.props.schoolInfo.course}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleSchoolChange}
           ></input>
         </label>
         <label htmlFor="school">
@@ -27,7 +27,7 @@ class School extends React.Component {
             className={this.props.number}
             placeholder="University of Colorado"
             value={this.props.schoolInfo.school}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleSchoolChange}
           ></input>
         </label>
         <label htmlFor="start">
@@ -38,7 +38,7 @@ class School extends React.Component {
             className={this.props.number}
             placeholder="2018"
             value={this.props.schoolInfo.start}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleSchoolChange}
           ></input>
         </label>
         <label htmlFor="end">
@@ -49,7 +49,7 @@ class School extends React.Component {
             className={this.props.number}
             placeholder="2022"
             value={this.props.schoolInfo.end}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleSchoolChange}
           ></input>
         </label>
         <label htmlFor="description">
@@ -61,12 +61,12 @@ class School extends React.Component {
             rows="4"
             cols="40"
             value={this.props.schoolInfo.description}
-            onChange={this.props.handleJobChange}
+            onChange={this.props.handleSchoolChange}
           ></textarea>
         </label>
         <button
           type="button"
-          onClick={() => this.props.removeJob(this.props.number)}
+          onClick={() => this.props.removeSchool(this.props.number)}
         >
           Remove
         </button>

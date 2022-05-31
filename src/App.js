@@ -15,12 +15,16 @@ class App extends React.Component {
         description: '',
       },
       work: [],
+      education: [],
     };
 
     this.handlePersonalChange.bind(this);
     this.handleJobChange.bind(this);
+    this.handleSchoolChange.bind(this);
     this.addJob.bind(this);
     this.removeJob.bind(this);
+    this.addSchool.bind(this);
+    this.removeSchool.bind(this);
   }
 
   handlePersonalChange = (e) => {
@@ -61,6 +65,35 @@ class App extends React.Component {
     this.setState({ work });
   };
 
+  addSchool = () => {
+    let school = {
+      course: '',
+      school: '',
+      start: '',
+      end: '',
+      description: '',
+    };
+    this.setState({
+      education: [...this.state.education, school],
+    });
+  };
+
+  removeSchool = (n) => {
+    this.setState({
+      education: this.state.education.filter((school) => {
+        return school !== this.state.education[n];
+      }),
+    });
+  };
+
+  handleSchoolChange = (e) => {
+    let education = [...this.state.education];
+    let school = { ...education[e.target.className] };
+    school[e.target.name] = e.target.value;
+    education[e.target.className] = school;
+    this.setState({ education });
+  };
+
   render() {
     return (
       <div className="App">
@@ -69,8 +102,11 @@ class App extends React.Component {
           {...this.state}
           handleJobChange={this.handleJobChange}
           handlePersonalChange={this.handlePersonalChange}
+          handleSchoolChange={this.handleSchoolChange}
           addJob={this.addJob}
           removeJob={this.removeJob}
+          addSchool={this.addSchool}
+          removeSchool={this.removeSchool}
         />
         <CV {...this.state} />
       </div>

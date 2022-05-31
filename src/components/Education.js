@@ -12,8 +12,8 @@ class Education extends React.Component {
         schoolInfo={this.props.education[this.props.education.indexOf(school)]}
         key={this.props.education.indexOf(school)}
         number={this.props.education.indexOf(school)}
-        handleJobChange={this.props.handleJobChange}
-        removeJob={this.props.removeJob}
+        handleSchoolChange={this.props.handleSchoolChange}
+        removeSchool={this.props.removeSchool}
       />
     ));
     return (

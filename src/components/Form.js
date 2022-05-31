@@ -24,7 +24,9 @@ class Form extends React.Component {
         />
         <Education
           education={this.props.education}
+          handleSchoolChange={this.props.handleSchoolChange}
           addSchool={this.props.addSchool}
+          removeSchool={this.props.removeSchool}
         />
       </form>
     );
