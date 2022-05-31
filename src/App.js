@@ -16,7 +16,6 @@ class App extends React.Component {
           description: '',
         },
       ],
-
       work: [],
       education: [],
     };
@@ -28,9 +27,9 @@ class App extends React.Component {
 
   handleInputChange = (type) => (e) => {
     let category = [...this.state[type]];
-    let key = { ...category[e.target.className] };
+    let key = { ...category[e.target.dataset.index] };
     key[e.target.name] = e.target.value;
-    category[e.target.className] = key;
+    category[e.target.dataset.index] = key;
     this.setState({ [type]: category });
   };
 
@@ -74,7 +73,6 @@ class App extends React.Component {
           handleInputChange={this.handleInputChange}
           addToArray={this.addToArray}
           removeItem={this.removeItem}
-          removeSchool={this.removeSchool}
         />
         <CV {...this.state} />
       </div>

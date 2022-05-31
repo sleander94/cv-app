@@ -13,7 +13,8 @@ class Job extends React.Component {
           <input
             type="text"
             name="company"
-            className={this.props.number}
+            className="job"
+            data-index={this.props.number}
             placeholder="Google"
             value={this.props.jobInfo.company}
             onChange={this.props.handleInputChange('work')}
@@ -24,7 +25,8 @@ class Job extends React.Component {
           <input
             type="text"
             name="title"
-            className={this.props.number}
+            className="job"
+            data-index={this.props.number}
             placeholder="Software Developer"
             value={this.props.jobInfo.title}
             onChange={this.props.handleInputChange('work')}
@@ -35,7 +37,8 @@ class Job extends React.Component {
           <input
             type="text"
             name="start"
-            className={this.props.number}
+            className="job"
+            data-index={this.props.number}
             placeholder="2018"
             value={this.props.jobInfo.start}
             onChange={this.props.handleInputChange('work')}
@@ -46,7 +49,8 @@ class Job extends React.Component {
           <input
             type="text"
             name="end"
-            className={this.props.number}
+            className="job"
+            data-index={this.props.number}
             placeholder="2022"
             value={this.props.jobInfo.end}
             onChange={this.props.handleInputChange('work')}
@@ -56,7 +60,8 @@ class Job extends React.Component {
           Description:{' '}
           <textarea
             name="description"
-            className={this.props.number}
+            className="job"
+            data-index={this.props.number}
             placeholder="Responsibilities and accomplishments."
             rows="4"
             cols="40"
