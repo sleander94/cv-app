@@ -59,7 +59,7 @@ class App extends React.Component {
 
   removeItem = (index, array) => {
     this.setState({
-      [array]: this.state.work.filter((item) => {
+      [array]: this.state[array].filter((item) => {
         return item !== this.state[array][index];
       }),
     });
