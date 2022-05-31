@@ -7,13 +7,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      personal: {
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        description: '',
-      },
+      personal: [
+        {
+          name: '',
+          email: '',
+          phone: '',
+          address: '',
+          description: '',
+        },
+      ],
+
       work: [],
       education: [],
     };
@@ -24,26 +27,11 @@ class App extends React.Component {
   }
 
   handleInputChange = (type) => (e) => {
-    if (type === 'personal') {
-      this.setState({
-        [e.target.className]: {
-          ...this.state[e.target.className],
-          [e.target.name]: e.target.value,
-        },
-      });
-    } else if (type === 'work') {
-      let work = [...this.state.work];
-      let job = { ...work[e.target.className] };
-      job[e.target.name] = e.target.value;
-      work[e.target.className] = job;
-      this.setState({ work });
-    } else if (type === 'education') {
-      let education = [...this.state.education];
-      let school = { ...education[e.target.className] };
-      school[e.target.name] = e.target.value;
-      education[e.target.className] = school;
-      this.setState({ education });
-    }
+    let category = [...this.state[type]];
+    let key = { ...category[e.target.className] };
+    key[e.target.name] = e.target.value;
+    category[e.target.className] = key;
+    this.setState({ [type]: category });
   };
 
   addToArray = (item, array) => {
