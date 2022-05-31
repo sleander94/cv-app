@@ -16,12 +16,14 @@ class Work extends React.Component {
         removeJob={this.props.removeJob}
       />
     ));
-
     return (
       <div className="workContainer">
         <h3>Work Experience</h3>
         {workList}
-        <button type="button" onClick={this.props.addJob}>
+        <button
+          type="button"
+          onClick={() => this.props.addToArray('job', 'work')}
+        >
           Add
         </button>
       </div>

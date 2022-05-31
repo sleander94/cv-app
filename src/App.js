@@ -19,9 +19,8 @@ class App extends React.Component {
     };
 
     this.handleInputChange.bind(this);
-    this.addJob.bind(this);
+    this.addToArray.bind(this);
     this.removeJob.bind(this);
-    this.addSchool.bind(this);
     this.removeSchool.bind(this);
   }
 
@@ -48,16 +47,26 @@ class App extends React.Component {
     }
   };
 
-  addJob = () => {
-    let job = {
-      company: '',
-      title: '',
-      start: '',
-      end: '',
-      description: '',
-    };
+  addToArray = (item, array) => {
+    if (item === 'job') {
+      item = {
+        company: '',
+        title: '',
+        start: '',
+        end: '',
+        description: '',
+      };
+    } else if (item === 'school') {
+      item = {
+        course: '',
+        school: '',
+        start: '',
+        end: '',
+        description: '',
+      };
+    }
     this.setState({
-      work: [...this.state.work, job],
+      [array]: [...this.state[array], item],
     });
   };
 
@@ -97,9 +106,8 @@ class App extends React.Component {
         <Form
           {...this.state}
           handleInputChange={this.handleInputChange}
-          addJob={this.addJob}
+          addToArray={this.addToArray}
           removeJob={this.removeJob}
-          addSchool={this.addSchool}
           removeSchool={this.removeSchool}
         />
         <CV {...this.state} />

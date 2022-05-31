@@ -20,7 +20,10 @@ class Education extends React.Component {
       <div className="educationontainer">
         <h3>Educational Experience</h3>
         {educationList}
-        <button type="button" onClick={this.props.addSchool}>
+        <button
+          type="button"
+          onClick={() => this.props.addToArray('school', 'education')}
+        >
           Add
         </button>
       </div>
