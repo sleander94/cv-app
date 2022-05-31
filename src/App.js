@@ -17,9 +17,10 @@ class App extends React.Component {
       work: [],
     };
 
-    this.handleJobChange.bind(this);
     this.handlePersonalChange.bind(this);
+    this.handleJobChange.bind(this);
     this.addJob.bind(this);
+    this.removeJob.bind(this);
   }
 
   handlePersonalChange = (e) => {
@@ -29,14 +30,6 @@ class App extends React.Component {
         [e.target.name]: e.target.value,
       },
     });
-  };
-
-  handleJobChange = (e) => {
-    let work = [...this.state.work];
-    let job = { ...work[e.target.className] };
-    job[e.target.name] = e.target.value;
-    work[e.target.className] = job;
-    this.setState({ work });
   };
 
   addJob = () => {
@@ -52,6 +45,22 @@ class App extends React.Component {
     });
   };
 
+  removeJob = (n) => {
+    this.setState({
+      work: this.state.work.filter((job) => {
+        return job !== this.state.work[n];
+      }),
+    });
+  };
+
+  handleJobChange = (e) => {
+    let work = [...this.state.work];
+    let job = { ...work[e.target.className] };
+    job[e.target.name] = e.target.value;
+    work[e.target.className] = job;
+    this.setState({ work });
+  };
+
   render() {
     return (
       <div className="App">
@@ -61,6 +70,7 @@ class App extends React.Component {
           handleJobChange={this.handleJobChange}
           handlePersonalChange={this.handlePersonalChange}
           addJob={this.addJob}
+          removeJob={this.removeJob}
         />
         <CV {...this.state} />
       </div>

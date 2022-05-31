@@ -19,6 +19,7 @@ class Form extends React.Component {
           work={this.props.work}
           handleJobChange={this.props.handleJobChange}
           addJob={this.props.addJob}
+          removeJob={this.props.removeJob}
         />
       </form>
     );
