@@ -34,25 +34,20 @@ class App extends React.Component {
   };
 
   addToArray = (item, array) => {
-    if (item === 'job') {
-      item = {
-        company: '',
-        title: '',
-        start: '',
-        end: '',
-        description: '',
-      };
-    } else if (item === 'school') {
-      item = {
-        course: '',
-        school: '',
-        start: '',
-        end: '',
-        description: '',
-      };
+    let obj = {
+      start: '',
+      end: '',
+      description: '',
+    };
+    if (item === 'school') {
+      obj.course = '';
+      obj.school = '';
+    } else if (item === 'job') {
+      obj.company = '';
+      obj.title = '';
     }
     this.setState({
-      [array]: [...this.state[array], item],
+      [array]: [...this.state[array], obj],
     });
   };
 
