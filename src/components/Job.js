@@ -6,7 +6,7 @@ class Job extends React.Component {
   }
 
   addButtonAtEnd = () => {
-    if (this.props.number === this.props.workArray.length - 1) {
+    if (this.props.number === this.props.work.length - 1) {
       return (
         <button
           type="button"

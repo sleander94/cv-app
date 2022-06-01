@@ -14,7 +14,7 @@ class Work extends React.Component {
         number={this.props.work.indexOf(job)}
         handleInputChange={this.props.handleInputChange}
         removeItem={this.props.removeItem}
-        workArray={this.props.work}
+        work={this.props.work}
         addToArray={this.props.addToArray}
       />
     ));
