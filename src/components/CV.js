@@ -44,11 +44,11 @@ class CV extends React.Component {
             {this.props.personal[0].description}
           </div>
         </div>
-        <div className="work">
+        <div className="workContainer">
           <h3>Work Experience</h3>
           {work}
         </div>
-        <div className="education">
+        <div className="educationContainer">
           <h3>Education</h3>
           {education}
         </div>
