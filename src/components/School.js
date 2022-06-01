@@ -7,7 +7,7 @@ class School extends React.Component {
 
   render() {
     return (
-      <div className="instituteContainer">
+      <div className="schoolContainer">
         <label htmlFor="course">
           Course:{' '}
           <input

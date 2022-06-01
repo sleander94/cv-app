@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Personal.css';
 
 class Personal extends React.Component {
   constructor(props) {
