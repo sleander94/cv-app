@@ -5,6 +5,19 @@ class Job extends React.Component {
     super(props);
   }
 
+  addButtonAtEnd = () => {
+    if (this.props.number === this.props.workArray.length - 1) {
+      return (
+        <button
+          type="button"
+          onClick={() => this.props.addToArray('job', 'work')}
+        >
+          Add
+        </button>
+      );
+    }
+  };
+
   render() {
     return (
       <div className="jobContainer">
@@ -70,6 +83,7 @@ class Job extends React.Component {
         >
           Remove
         </button>
+        {this.addButtonAtEnd()}
       </div>
     );
   }

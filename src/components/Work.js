@@ -14,18 +14,14 @@ class Work extends React.Component {
         number={this.props.work.indexOf(job)}
         handleInputChange={this.props.handleInputChange}
         removeItem={this.props.removeItem}
+        workArray={this.props.work}
+        addToArray={this.props.addToArray}
       />
     ));
     return (
       <div className="workContainer">
         <h3>Work Experience</h3>
         {workList}
-        <button
-          type="button"
-          onClick={() => this.props.addToArray('job', 'work')}
-        >
-          Add
-        </button>
       </div>
     );
   }
