@@ -77,13 +77,15 @@ class Job extends React.Component {
             onChange={this.props.handleInputChange('work')}
           ></textarea>
         </label>
-        <button
-          type="button"
-          onClick={() => this.props.removeItem(this.props.number, 'work')}
-        >
-          Remove
-        </button>
-        {this.addButtonAtEnd()}
+        <div className="buttonContainer">
+          <button
+            type="button"
+            onClick={() => this.props.removeItem(this.props.number, 'work')}
+          >
+            Remove
+          </button>
+          {this.addButtonAtEnd()}
+        </div>
       </div>
     );
   }

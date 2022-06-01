@@ -77,13 +77,17 @@ class School extends React.Component {
             onChange={this.props.handleInputChange('education')}
           ></textarea>
         </label>
-        <button
-          type="button"
-          onClick={() => this.props.removeItem(this.props.number, 'education')}
-        >
-          Remove
-        </button>
-        {this.addButtonAtEnd()}
+        <div className="buttonContainer">
+          <button
+            type="button"
+            onClick={() =>
+              this.props.removeItem(this.props.number, 'education')
+            }
+          >
+            Remove
+          </button>
+          {this.addButtonAtEnd()}
+        </div>
       </div>
     );
   }
