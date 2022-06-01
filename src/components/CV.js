@@ -36,7 +36,7 @@ class CV extends React.Component {
     return (
       <div className="CV">
         <div className="personal">
-          <h2 className="name">{this.props.personal[0].name}</h2>
+          <div className="name">{this.props.personal[0].name}</div>
           <div className="email">{this.props.personal[0].email}</div>
           <div className="phone">{this.props.personal[0].phone}</div>
           <div className="address">{this.props.personal[0].address}</div>
