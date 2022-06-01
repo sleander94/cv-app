@@ -16,8 +16,24 @@ class App extends React.Component {
           description: 'Professional Title',
         },
       ],
-      work: [],
-      education: [],
+      work: [
+        {
+          title: 'Software Developer',
+          company: 'Awesome Company',
+          start: '2018',
+          end: 'Present',
+          description: 'Responsibilities and accomplishments.',
+        },
+      ],
+      education: [
+        {
+          course: 'Fullstack Javascript',
+          school: 'The Odin Project',
+          start: '2021',
+          end: '2022',
+          description: 'Course description.',
+        },
+      ],
     };
 
     this.handleInputChange.bind(this);
