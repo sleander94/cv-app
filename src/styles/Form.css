@@ -30,9 +30,20 @@ label {
   justify-content: space-between;
 }
 
+.buttonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.buttonContainer .remove {
+  grid-column: 2 / 3;
+  justify-self: end;
+}
+
 button {
+  grid-column: 1 / 2;
   width: 75px;
-  justify-self: start;
 }
 
 @media screen and (min-width: 1080px) {
