@@ -14,6 +14,7 @@ class CV extends React.Component {
           <div className="company">{this.props.work[i].company}</div>
           <div className="title">{this.props.work[i].title}</div>
           <div className="start">{this.props.work[i].start}</div>
+          <div className="dash">-</div>
           <div className="end">{this.props.work[i].end}</div>
           <div className="description">{this.props.work[i].description}</div>
         </div>
@@ -26,6 +27,7 @@ class CV extends React.Component {
           <div className="course">{this.props.education[i].course}</div>
           <div className="school">{this.props.education[i].school}</div>
           <div className="start">{this.props.education[i].start}</div>
+          <div className="dash">-</div>
           <div className="end">{this.props.education[i].end}</div>
           <div className="description">
             {this.props.education[i].description}
