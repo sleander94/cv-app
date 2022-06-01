@@ -15,7 +15,6 @@ class School extends React.Component {
             name="course"
             className="school"
             data-index={this.props.number}
-            placeholder="BS Computer Science"
             value={this.props.schoolInfo.course}
             onChange={this.props.handleInputChange('education')}
           ></input>
@@ -27,7 +26,6 @@ class School extends React.Component {
             name="school"
             className="school"
             data-index={this.props.number}
-            placeholder="University of Colorado"
             value={this.props.schoolInfo.school}
             onChange={this.props.handleInputChange('education')}
           ></input>
@@ -39,7 +37,6 @@ class School extends React.Component {
             name="start"
             className="school"
             data-index={this.props.number}
-            placeholder="2018"
             value={this.props.schoolInfo.start}
             onChange={this.props.handleInputChange('education')}
           ></input>
@@ -51,7 +48,6 @@ class School extends React.Component {
             name="end"
             className="school"
             data-index={this.props.number}
-            placeholder="2022"
             value={this.props.schoolInfo.end}
             onChange={this.props.handleInputChange('education')}
           ></input>
@@ -62,7 +58,6 @@ class School extends React.Component {
             name="description"
             className="school"
             data-index={this.props.number}
-            placeholder="Coursework and accomplishments."
             rows="4"
             cols="40"
             value={this.props.schoolInfo.description}

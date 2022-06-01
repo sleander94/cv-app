@@ -8,18 +8,6 @@ class Job extends React.Component {
   render() {
     return (
       <div className="jobContainer">
-        <label htmlFor="company">
-          Company:{' '}
-          <input
-            type="text"
-            name="company"
-            className="job"
-            data-index={this.props.number}
-            placeholder="Google"
-            value={this.props.jobInfo.company}
-            onChange={this.props.handleInputChange('work')}
-          ></input>
-        </label>
         <label htmlFor="title">
           Title:{' '}
           <input
@@ -27,8 +15,18 @@ class Job extends React.Component {
             name="title"
             className="job"
             data-index={this.props.number}
-            placeholder="Software Developer"
             value={this.props.jobInfo.title}
+            onChange={this.props.handleInputChange('work')}
+          ></input>
+        </label>
+        <label htmlFor="company">
+          Company:{' '}
+          <input
+            type="text"
+            name="company"
+            className="job"
+            data-index={this.props.number}
+            value={this.props.jobInfo.company}
             onChange={this.props.handleInputChange('work')}
           ></input>
         </label>
@@ -39,7 +37,6 @@ class Job extends React.Component {
             name="start"
             className="job"
             data-index={this.props.number}
-            placeholder="2018"
             value={this.props.jobInfo.start}
             onChange={this.props.handleInputChange('work')}
           ></input>
@@ -51,7 +48,6 @@ class Job extends React.Component {
             name="end"
             className="job"
             data-index={this.props.number}
-            placeholder="2022"
             value={this.props.jobInfo.end}
             onChange={this.props.handleInputChange('work')}
           ></input>
@@ -62,7 +58,6 @@ class Job extends React.Component {
             name="description"
             className="job"
             data-index={this.props.number}
-            placeholder="Responsibilities and accomplishments."
             rows="4"
             cols="40"
             value={this.props.jobInfo.description}

@@ -9,11 +9,11 @@ class App extends React.Component {
     this.state = {
       personal: [
         {
-          name: '',
-          email: '',
-          phone: '',
-          address: '',
-          description: '',
+          name: 'John Smith',
+          email: 'johnsmith@email.com',
+          phone: '(555)555-5555',
+          address: 'City, ST',
+          description: 'Professional Title',
         },
       ],
       work: [],
@@ -35,16 +35,16 @@ class App extends React.Component {
 
   addToArray = (item, array) => {
     let obj = {
-      start: '',
-      end: '',
-      description: '',
+      start: 'Year',
+      end: 'Year',
+      description: 'Details and accomplishments.',
     };
     if (item === 'school') {
-      obj.course = '';
-      obj.school = '';
+      obj.course = 'Course';
+      obj.school = 'School';
     } else if (item === 'job') {
-      obj.company = '';
-      obj.title = '';
+      obj.company = 'Company';
+      obj.title = 'Job Title';
     }
     this.setState({
       [array]: [...this.state[array], obj],
