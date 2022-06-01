@@ -1,5 +1,6 @@
 import React from 'react';
 import Job from './Job';
+import '../styles/Work.css';
 
 class Work extends React.Component {
   constructor(props) {
