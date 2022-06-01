@@ -1,0 +1,26 @@
+.App {
+  display: grid;
+  grid-template-rows: 150px 1fr 1fr 150px;
+  justify-items: center;
+  gap: 18px;
+  width: 100vw;
+}
+
+.App h1 {
+  grid-row: 1 / 2;
+  justify-self: center;
+  align-self: center;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 1080px) {
+  .App {
+    display: grid;
+    grid: 150px 1fr 150px / 1fr 1fr;
+    max-width: 95vw;
+  }
+
+  .App h1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+}

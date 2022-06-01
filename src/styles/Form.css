@@ -1,0 +1,43 @@
+form {
+  grid-row: 2 / 3;
+  width: 600px;
+  padding: 12px;
+  border: 2px solid black;
+}
+
+form h3 {
+  font-size: 1.4rem;
+  margin: 0px;
+  padding: 8px 0px 8px 0px;
+}
+
+.personalContainer,
+.jobContainer,
+.schoolContainer {
+  display: grid;
+  gap: 8px;
+  padding-bottom: 12px;
+}
+
+input,
+textarea {
+  resize: none;
+  width: 75%;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 75px;
+  justify-self: start;
+}
+
+@media screen and (min-width: 1080px) {
+  form {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 600px;
+  }
+}
