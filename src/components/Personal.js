@@ -59,15 +59,13 @@ class Personal extends React.Component {
 
         <label htmlFor="description">
           Description:{' '}
-          <textarea
+          <input
             name="description"
             className="personal"
             data-index="0"
-            rows="4"
-            cols="40"
             value={this.props.personal[0].description}
             onChange={this.props.handleInputChange('personal')}
-          ></textarea>
+          ></input>
         </label>
       </div>
     );
