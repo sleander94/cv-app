@@ -14,18 +14,14 @@ class Education extends React.Component {
         number={this.props.education.indexOf(school)}
         handleInputChange={this.props.handleInputChange}
         removeItem={this.props.removeItem}
+        addToArray={this.props.addToArray}
+        education={this.props.education}
       />
     ));
     return (
-      <div className="educationontainer">
+      <div className="educationContainer">
         <h3>Education</h3>
         {educationList}
-        <button
-          type="button"
-          onClick={() => this.props.addToArray('school', 'education')}
-        >
-          Add
-        </button>
       </div>
     );
   }

@@ -5,6 +5,21 @@ class School extends React.Component {
     super(props);
   }
 
+  addButtonAtEnd = () => {
+    console.log(this.props.number);
+    console.log(this.props.education);
+    if (this.props.number === this.props.education.length - 1) {
+      return (
+        <button
+          type="button"
+          onClick={() => this.props.addToArray('school', 'education')}
+        >
+          Add
+        </button>
+      );
+    }
+  };
+
   render() {
     return (
       <div className="schoolContainer">
@@ -70,6 +85,7 @@ class School extends React.Component {
         >
           Remove
         </button>
+        {this.addButtonAtEnd()}
       </div>
     );
   }
