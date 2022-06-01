@@ -6,8 +6,6 @@ class School extends React.Component {
   }
 
   addButtonAtEnd = () => {
-    console.log(this.props.number);
-    console.log(this.props.education);
     if (this.props.number === this.props.education.length - 1) {
       return (
         <button
