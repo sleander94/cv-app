@@ -78,6 +78,7 @@ class School extends React.Component {
           ></textarea>
         </label>
         <div className="buttonContainer">
+          {this.addButtonAtEnd()}
           <button
             type="button"
             onClick={() =>
@@ -86,7 +87,6 @@ class School extends React.Component {
           >
             Remove
           </button>
-          {this.addButtonAtEnd()}
         </div>
       </div>
     );

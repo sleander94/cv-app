@@ -78,6 +78,7 @@ class Job extends React.Component {
           ></textarea>
         </label>
         <div className="buttonContainer">
+          {this.addButtonAtEnd()}
           <button
             type="button"
             onClick={() => this.props.removeItem(this.props.number, 'work')}
