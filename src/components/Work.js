@@ -2,10 +2,6 @@ import React from 'react';
 import Job from './Job';
 
 class Work extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const workList = this.props.work.map((job) => (
       <Job

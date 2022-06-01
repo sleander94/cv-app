@@ -2,10 +2,6 @@ import React from 'react';
 import School from './School';
 
 class Education extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const educationList = this.props.education.map((school) => (
       <School

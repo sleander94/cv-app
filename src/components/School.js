@@ -1,10 +1,6 @@
 import React from 'react';
 
 class School extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   addButtonAtEnd = () => {
     if (this.props.number === this.props.education.length - 1) {
       return (

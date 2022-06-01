@@ -2,10 +2,6 @@ import React from 'react';
 import '../styles/CV.css';
 
 class CV extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let work = [];
     for (let i = 0; i < this.props.work.length; i++) {

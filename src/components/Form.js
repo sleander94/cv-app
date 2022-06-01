@@ -5,10 +5,6 @@ import Education from './Education';
 import '../styles/Form.css';
 
 class Form extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <form>

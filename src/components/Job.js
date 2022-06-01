@@ -1,10 +1,6 @@
 import React from 'react';
 
 class Job extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   addButtonAtEnd = () => {
     if (this.props.number === this.props.work.length - 1) {
       return (
