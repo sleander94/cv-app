@@ -81,6 +81,7 @@ class School extends React.Component {
           {this.addButtonAtEnd()}
           <button
             type="button"
+            className="remove"
             onClick={() =>
               this.props.removeItem(this.props.number, 'education')
             }
