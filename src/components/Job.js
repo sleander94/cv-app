@@ -10,9 +10,24 @@ class Job extends React.Component {
       return (
         <button
           type="button"
+          className="add"
           onClick={() => this.props.addToArray('job', 'work')}
         >
           Add
+        </button>
+      );
+    }
+  };
+
+  removeButton = () => {
+    if (this.props.work.length > 1) {
+      return (
+        <button
+          type="button"
+          className="remove"
+          onClick={() => this.props.removeItem(this.props.number, 'work')}
+        >
+          Remove
         </button>
       );
     }
@@ -79,13 +94,7 @@ class Job extends React.Component {
         </label>
         <div className="buttonContainer">
           {this.addButtonAtEnd()}
-          <button
-            type="button"
-            className="remove"
-            onClick={() => this.props.removeItem(this.props.number, 'work')}
-          >
-            Remove
-          </button>
+          {this.removeButton()}
         </div>
       </div>
     );

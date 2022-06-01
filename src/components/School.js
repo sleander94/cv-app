@@ -18,6 +18,20 @@ class School extends React.Component {
     }
   };
 
+  removeButton = () => {
+    if (this.props.education.length > 1) {
+      return (
+        <button
+          type="button"
+          className="remove"
+          onClick={() => this.props.removeItem(this.props.number, 'education')}
+        >
+          Remove
+        </button>
+      );
+    }
+  };
+
   render() {
     return (
       <div className="schoolContainer">
@@ -79,15 +93,7 @@ class School extends React.Component {
         </label>
         <div className="buttonContainer">
           {this.addButtonAtEnd()}
-          <button
-            type="button"
-            className="remove"
-            onClick={() =>
-              this.props.removeItem(this.props.number, 'education')
-            }
-          >
-            Remove
-          </button>
+          {this.removeButton()}
         </div>
       </div>
     );
