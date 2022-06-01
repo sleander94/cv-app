@@ -44,8 +44,14 @@ class CV extends React.Component {
             {this.props.personal[0].description}
           </div>
         </div>
-        {work}
-        {education}
+        <div className="work">
+          <h3>Work Experience</h3>
+          {work}
+        </div>
+        <div className="education">
+          <h3>Education</h3>
+          {education}
+        </div>
       </div>
     );
   }

@@ -18,7 +18,7 @@ class Education extends React.Component {
     ));
     return (
       <div className="educationontainer">
-        <h3>Educational Experience</h3>
+        <h3>Education</h3>
         {educationList}
         <button
           type="button"
