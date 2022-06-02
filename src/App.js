@@ -23,23 +23,16 @@ const App = () => {
         description: 'Responsibilities and accomplishments.',
       },
     ],
+    education: [
+      {
+        course: 'Fullstack Javascript',
+        school: 'The Odin Project',
+        start: '2021',
+        end: '2022',
+        description: 'Course description.',
+      },
+    ],
   });
-  /* 
-      education: [
-        {
-          course: 'Fullstack Javascript',
-          school: 'The Odin Project',
-          start: '2021',
-          end: '2022',
-          description: 'Course description.',
-        },
-      ],
-    }; */
-
-  /*     this.handleInputChange.bind(this);
-    this.addToArray.bind(this);
-    this.removeItem.bind(this);
-  } */
 
   const handleInputChange = (type) => (e) => {
     let array = values;

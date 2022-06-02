@@ -14,22 +14,20 @@ const CV = ({ values }) => {
         <div className="description">{values.work[i].description}</div>
       </div>
     );
-  } /*
-    let education = [];
-    for (let i = 0; i < this.props.education.length; i++) {
-      education.push(
-        <div className="education" key={i}>
-          <div className="course">{this.props.education[i].course}</div>
-          <div className="school">{this.props.education[i].school}</div>
-          <div className="start">{this.props.education[i].start}</div>
-          <div className="dash">-</div>
-          <div className="end">{this.props.education[i].end}</div>
-          <div className="description">
-            {this.props.education[i].description}
-          </div>
-        </div>
-      );
-    } */
+  }
+  let education = [];
+  for (let i = 0; i < values.education.length; i++) {
+    education.push(
+      <div className="education" key={i}>
+        <div className="course">{values.education[i].course}</div>
+        <div className="school">{values.education[i].school}</div>
+        <div className="start">{values.education[i].start}</div>
+        <div className="dash">-</div>
+        <div className="end">{values.education[i].end}</div>
+        <div className="description">{values.education[i].description}</div>
+      </div>
+    );
+  }
   return (
     <div className="CV">
       <div className="personal">
@@ -43,11 +41,11 @@ const CV = ({ values }) => {
         <h3>Work Experience</h3>
         {work}
       </div>
-      {/*
-        <div className="educationContainer">
-          <h3>Education</h3>
-          {education}
-        </div> */}
+
+      <div className="educationContainer">
+        <h3>Education</h3>
+        {education}
+      </div>
     </div>
   );
 };

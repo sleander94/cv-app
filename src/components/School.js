@@ -1,26 +1,30 @@
 import React from 'react';
 
-class School extends React.Component {
-  addButtonAtEnd = () => {
-    if (this.props.number === this.props.education.length - 1) {
+const School = ({
+  education,
+  schoolInfo,
+  number,
+  addItem,
+  removeItem,
+  handleInputChange,
+}) => {
+  const addButtonAtEnd = () => {
+    if (number === education.length - 1) {
       return (
-        <button
-          type="button"
-          onClick={() => this.props.addToArray('school', 'education')}
-        >
+        <button type="button" onClick={() => addItem('school', 'education')}>
           Add
         </button>
       );
     }
   };
 
-  removeButton = () => {
-    if (this.props.education.length > 1) {
+  const removeButton = () => {
+    if (education.length > 1) {
       return (
         <button
           type="button"
           className="remove"
-          onClick={() => this.props.removeItem(this.props.number, 'education')}
+          onClick={() => removeItem(number, 'education')}
         >
           Remove
         </button>
@@ -28,72 +32,70 @@ class School extends React.Component {
     }
   };
 
-  render() {
-    return (
-      <div className="schoolContainer">
-        <label htmlFor="course">
-          Course:{' '}
-          <input
-            type="text"
-            name="course"
-            className="school"
-            data-index={this.props.number}
-            value={this.props.schoolInfo.course}
-            onChange={this.props.handleInputChange('education')}
-          ></input>
-        </label>
-        <label htmlFor="school">
-          School:{' '}
-          <input
-            type="text"
-            name="school"
-            className="school"
-            data-index={this.props.number}
-            value={this.props.schoolInfo.school}
-            onChange={this.props.handleInputChange('education')}
-          ></input>
-        </label>
-        <label htmlFor="start">
-          Start:{' '}
-          <input
-            type="text"
-            name="start"
-            className="school"
-            data-index={this.props.number}
-            value={this.props.schoolInfo.start}
-            onChange={this.props.handleInputChange('education')}
-          ></input>
-        </label>
-        <label htmlFor="end">
-          End:{' '}
-          <input
-            type="text"
-            name="end"
-            className="school"
-            data-index={this.props.number}
-            value={this.props.schoolInfo.end}
-            onChange={this.props.handleInputChange('education')}
-          ></input>
-        </label>
-        <label htmlFor="description">
-          Description:{' '}
-          <textarea
-            name="description"
-            className="school"
-            data-index={this.props.number}
-            rows="4"
-            cols="40"
-            value={this.props.schoolInfo.description}
-            onChange={this.props.handleInputChange('education')}
-          ></textarea>
-        </label>
-        <div className="buttonContainer">
-          {this.addButtonAtEnd()}
-          {this.removeButton()}
-        </div>
+  return (
+    <div className="schoolContainer">
+      <label htmlFor="course">
+        Course:{' '}
+        <input
+          type="text"
+          name="course"
+          className="school"
+          data-index={number}
+          value={schoolInfo.course}
+          onChange={handleInputChange('education')}
+        ></input>
+      </label>
+      <label htmlFor="school">
+        School:{' '}
+        <input
+          type="text"
+          name="school"
+          className="school"
+          data-index={number}
+          value={schoolInfo.school}
+          onChange={handleInputChange('education')}
+        ></input>
+      </label>
+      <label htmlFor="start">
+        Start:{' '}
+        <input
+          type="text"
+          name="start"
+          className="school"
+          data-index={number}
+          value={schoolInfo.start}
+          onChange={handleInputChange('education')}
+        ></input>
+      </label>
+      <label htmlFor="end">
+        End:{' '}
+        <input
+          type="text"
+          name="end"
+          className="school"
+          data-index={number}
+          value={schoolInfo.end}
+          onChange={handleInputChange('education')}
+        ></input>
+      </label>
+      <label htmlFor="description">
+        Description:{' '}
+        <textarea
+          name="description"
+          className="school"
+          data-index={number}
+          rows="4"
+          cols="40"
+          value={schoolInfo.description}
+          onChange={handleInputChange('education')}
+        ></textarea>
+      </label>
+      <div className="buttonContainer">
+        {addButtonAtEnd()}
+        {removeButton()}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default School;
