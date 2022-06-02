@@ -5,6 +5,33 @@ import Education from './Education';
 import '../styles/Form.css';
 
 const Form = ({ values, handleInputChange, addItem, removeItem }) => {
+  const addButtonAtEnd = (number, item, type, array) => {
+    if (number === array.length - 1) {
+      return (
+        <button
+          type="button"
+          className="add"
+          onClick={() => addItem(item, type)}
+        >
+          Add
+        </button>
+      );
+    }
+  };
+
+  const removeButton = (number, type, array) => {
+    if (array.length > 1) {
+      return (
+        <button
+          type="button"
+          className="remove"
+          onClick={() => removeItem(number, type)}
+        >
+          Remove
+        </button>
+      );
+    }
+  };
   return (
     <form>
       <Personal
@@ -14,15 +41,15 @@ const Form = ({ values, handleInputChange, addItem, removeItem }) => {
       <Work
         work={values.work}
         handleInputChange={handleInputChange}
-        addItem={addItem}
-        removeItem={removeItem}
+        removeButton={removeButton}
+        addButtonAtEnd={addButtonAtEnd}
       />
 
       <Education
         education={values.education}
         handleInputChange={handleInputChange}
-        addItem={addItem}
-        removeItem={removeItem}
+        removeButton={removeButton}
+        addButtonAtEnd={addButtonAtEnd}
       />
     </form>
   );

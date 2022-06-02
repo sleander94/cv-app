@@ -4,38 +4,10 @@ const Job = ({
   work,
   jobInfo,
   number,
-  removeItem,
-  addItem,
   handleInputChange,
+  removeButton,
+  addButtonAtEnd,
 }) => {
-  const addButtonAtEnd = () => {
-    if (number === work.length - 1) {
-      return (
-        <button
-          type="button"
-          className="add"
-          onClick={() => addItem('job', 'work')}
-        >
-          Add
-        </button>
-      );
-    }
-  };
-
-  const removeButton = () => {
-    if (work.length > 1) {
-      return (
-        <button
-          type="button"
-          className="remove"
-          onClick={() => removeItem(number, 'work')}
-        >
-          Remove
-        </button>
-      );
-    }
-  };
-
   return (
     <div className="jobContainer">
       <label htmlFor="title">
@@ -95,8 +67,8 @@ const Job = ({
         ></textarea>
       </label>
       <div className="buttonContainer">
-        {addButtonAtEnd()}
-        {removeButton()}
+        {addButtonAtEnd(number, 'job', 'work', work)}
+        {removeButton(number, 'work', work)}
       </div>
     </div>
   );

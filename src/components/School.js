@@ -4,34 +4,10 @@ const School = ({
   education,
   schoolInfo,
   number,
-  addItem,
-  removeItem,
+  addButtonAtEnd,
+  removeButton,
   handleInputChange,
 }) => {
-  const addButtonAtEnd = () => {
-    if (number === education.length - 1) {
-      return (
-        <button type="button" onClick={() => addItem('school', 'education')}>
-          Add
-        </button>
-      );
-    }
-  };
-
-  const removeButton = () => {
-    if (education.length > 1) {
-      return (
-        <button
-          type="button"
-          className="remove"
-          onClick={() => removeItem(number, 'education')}
-        >
-          Remove
-        </button>
-      );
-    }
-  };
-
   return (
     <div className="schoolContainer">
       <label htmlFor="course">
@@ -91,8 +67,8 @@ const School = ({
         ></textarea>
       </label>
       <div className="buttonContainer">
-        {addButtonAtEnd()}
-        {removeButton()}
+        {addButtonAtEnd(number, 'school', 'education', education)}
+        {removeButton(number, 'education', education)}
       </div>
     </div>
   );

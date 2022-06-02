@@ -1,15 +1,20 @@
 import React from 'react';
 import School from './School';
 
-const Education = ({ education, handleInputChange, addItem, removeItem }) => {
+const Education = ({
+  education,
+  handleInputChange,
+  addButtonAtEnd,
+  removeButton,
+}) => {
   const educationList = education.map((school) => (
     <School
       schoolInfo={education[education.indexOf(school)]}
       key={education.indexOf(school)}
       number={education.indexOf(school)}
       handleInputChange={handleInputChange}
-      removeItem={removeItem}
-      addItem={addItem}
+      removeButton={removeButton}
+      addButtonAtEnd={addButtonAtEnd}
       education={education}
     />
   ));
