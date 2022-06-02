@@ -2,19 +2,19 @@ import React from 'react';
 import '../styles/CV.css';
 
 const CV = ({ values }) => {
-  /*  let work = [];
-    for (let i = 0; i < this.props.work.length; i++) {
-      work.push(
-        <div className="work" key={i}>
-          <div className="company">{this.props.work[i].company}</div>
-          <div className="title">{this.props.work[i].title}</div>
-          <div className="start">{this.props.work[i].start}</div>
-          <div className="dash">-</div>
-          <div className="end">{this.props.work[i].end}</div>
-          <div className="description">{this.props.work[i].description}</div>
-        </div>
-      );
-    }
+  let work = [];
+  for (let i = 0; i < values.work.length; i++) {
+    work.push(
+      <div className="work" key={i}>
+        <div className="company">{values.work[i].company}</div>
+        <div className="title">{values.work[i].title}</div>
+        <div className="start">{values.work[i].start}</div>
+        <div className="dash">-</div>
+        <div className="end">{values.work[i].end}</div>
+        <div className="description">{values.work[i].description}</div>
+      </div>
+    );
+  } /*
     let education = [];
     for (let i = 0; i < this.props.education.length; i++) {
       education.push(
@@ -39,10 +39,11 @@ const CV = ({ values }) => {
         <div className="address">{values.personal[0].address}</div>
         <div className="description">{values.personal[0].description}</div>
       </div>
-      {/*  <div className="workContainer">
-          <h3>Work Experience</h3>
-          {work}
-        </div>
+      <div className="workContainer">
+        <h3>Work Experience</h3>
+        {work}
+      </div>
+      {/*
         <div className="educationContainer">
           <h3>Education</h3>
           {education}

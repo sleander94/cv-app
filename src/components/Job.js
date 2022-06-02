@@ -7,7 +7,7 @@ class Job extends React.Component {
         <button
           type="button"
           className="add"
-          onClick={() => this.props.addToArray('job', 'work')}
+          onClick={() => this.props.addItem('job', 'work')}
         >
           Add
         </button>
