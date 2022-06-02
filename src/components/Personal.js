@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Personal = ({ values, handleInputChange }) => {
+const Personal = ({ personal, handleInputChange }) => {
   return (
     <div className="personalContainer">
       <h3>Personal Information</h3>
@@ -11,7 +11,7 @@ const Personal = ({ values, handleInputChange }) => {
           name="name"
           className="personal"
           data-index="0"
-          value={values.personal[0].name}
+          value={personal[0].name}
           onChange={handleInputChange('personal')}
         ></input>
       </label>
@@ -23,7 +23,7 @@ const Personal = ({ values, handleInputChange }) => {
           name="email"
           className="personal"
           data-index="0"
-          value={values.personal[0].email}
+          value={personal[0].email}
           onChange={handleInputChange('personal')}
         ></input>
       </label>
@@ -35,7 +35,7 @@ const Personal = ({ values, handleInputChange }) => {
           name="phone"
           className="personal"
           data-index="0"
-          value={values.personal[0].phone}
+          value={personal[0].phone}
           onChange={handleInputChange('personal')}
         ></input>
       </label>
@@ -47,7 +47,7 @@ const Personal = ({ values, handleInputChange }) => {
           name="address"
           className="personal"
           data-index="0"
-          value={values.personal[0].address}
+          value={personal[0].address}
           onChange={handleInputChange('personal')}
         ></input>
       </label>
@@ -58,7 +58,7 @@ const Personal = ({ values, handleInputChange }) => {
           name="description"
           className="personal"
           data-index="0"
-          value={values.personal[0].description}
+          value={personal[0].description}
           onChange={handleInputChange('personal')}
         ></input>
       </label>
