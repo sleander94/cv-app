@@ -1,13 +1,20 @@
 import React from 'react';
 
-class Job extends React.Component {
-  addButtonAtEnd = () => {
-    if (this.props.number === this.props.work.length - 1) {
+const Job = ({
+  work,
+  jobInfo,
+  number,
+  removeItem,
+  addItem,
+  handleInputChange,
+}) => {
+  const addButtonAtEnd = () => {
+    if (number === work.length - 1) {
       return (
         <button
           type="button"
           className="add"
-          onClick={() => this.props.addItem('job', 'work')}
+          onClick={() => addItem('job', 'work')}
         >
           Add
         </button>
@@ -15,13 +22,13 @@ class Job extends React.Component {
     }
   };
 
-  removeButton = () => {
-    if (this.props.work.length > 1) {
+  const removeButton = () => {
+    if (work.length > 1) {
       return (
         <button
           type="button"
           className="remove"
-          onClick={() => this.props.removeItem(this.props.number, 'work')}
+          onClick={() => removeItem(number, 'work')}
         >
           Remove
         </button>
@@ -29,72 +36,70 @@ class Job extends React.Component {
     }
   };
 
-  render() {
-    return (
-      <div className="jobContainer">
-        <label htmlFor="title">
-          Title:{' '}
-          <input
-            type="text"
-            name="title"
-            className="job"
-            data-index={this.props.number}
-            value={this.props.jobInfo.title}
-            onChange={this.props.handleInputChange('work')}
-          ></input>
-        </label>
-        <label htmlFor="company">
-          Company:{' '}
-          <input
-            type="text"
-            name="company"
-            className="job"
-            data-index={this.props.number}
-            value={this.props.jobInfo.company}
-            onChange={this.props.handleInputChange('work')}
-          ></input>
-        </label>
-        <label htmlFor="start">
-          Start:{' '}
-          <input
-            type="text"
-            name="start"
-            className="job"
-            data-index={this.props.number}
-            value={this.props.jobInfo.start}
-            onChange={this.props.handleInputChange('work')}
-          ></input>
-        </label>
-        <label htmlFor="end">
-          End:{' '}
-          <input
-            type="text"
-            name="end"
-            className="job"
-            data-index={this.props.number}
-            value={this.props.jobInfo.end}
-            onChange={this.props.handleInputChange('work')}
-          ></input>
-        </label>
-        <label htmlFor="description">
-          Description:{' '}
-          <textarea
-            name="description"
-            className="job"
-            data-index={this.props.number}
-            rows="4"
-            cols="40"
-            value={this.props.jobInfo.description}
-            onChange={this.props.handleInputChange('work')}
-          ></textarea>
-        </label>
-        <div className="buttonContainer">
-          {this.addButtonAtEnd()}
-          {this.removeButton()}
-        </div>
+  return (
+    <div className="jobContainer">
+      <label htmlFor="title">
+        Title:{' '}
+        <input
+          type="text"
+          name="title"
+          className="job"
+          data-index={number}
+          value={jobInfo.title}
+          onChange={handleInputChange('work')}
+        ></input>
+      </label>
+      <label htmlFor="company">
+        Company:{' '}
+        <input
+          type="text"
+          name="company"
+          className="job"
+          data-index={number}
+          value={jobInfo.company}
+          onChange={handleInputChange('work')}
+        ></input>
+      </label>
+      <label htmlFor="start">
+        Start:{' '}
+        <input
+          type="text"
+          name="start"
+          className="job"
+          data-index={number}
+          value={jobInfo.start}
+          onChange={handleInputChange('work')}
+        ></input>
+      </label>
+      <label htmlFor="end">
+        End:{' '}
+        <input
+          type="text"
+          name="end"
+          className="job"
+          data-index={number}
+          value={jobInfo.end}
+          onChange={handleInputChange('work')}
+        ></input>
+      </label>
+      <label htmlFor="description">
+        Description:{' '}
+        <textarea
+          name="description"
+          className="job"
+          data-index={number}
+          rows="4"
+          cols="40"
+          value={jobInfo.description}
+          onChange={handleInputChange('work')}
+        ></textarea>
+      </label>
+      <div className="buttonContainer">
+        {addButtonAtEnd()}
+        {removeButton()}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Job;
