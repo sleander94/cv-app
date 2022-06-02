@@ -14,16 +14,17 @@ const App = () => {
         description: 'Professional Title',
       },
     ],
+    work: [
+      {
+        title: 'Software Developer',
+        company: 'Awesome Company',
+        start: '2018',
+        end: 'Present',
+        description: 'Responsibilities and accomplishments.',
+      },
+    ],
   });
-  /*       work: [
-        {
-          title: 'Software Developer',
-          company: 'Awesome Company',
-          start: '2018',
-          end: 'Present',
-          description: 'Responsibilities and accomplishments.',
-        },
-      ],
+  /* 
       education: [
         {
           course: 'Fullstack Javascript',
@@ -41,22 +42,14 @@ const App = () => {
   } */
 
   const handleInputChange = (type) => (e) => {
-    let category = [...values[type]];
-    let key = { ...category[e.target.dataset.index] };
-    key[e.target.name] = e.target.value;
-    category[e.target.dataset.index] = key;
-    setValues({ [type]: category });
+    let array = values;
+    let item = { ...array[type][e.target.dataset.index] };
+    item[e.target.name] = e.target.value;
+    array[type][e.target.dataset.index] = item;
+    setValues({ ...array });
   };
 
-  /*   handleInputChange = (type) => (e) => {
-    let category = [...this.state[type]];
-    let key = { ...category[e.target.dataset.index] };
-    key[e.target.name] = e.target.value;
-    category[e.target.dataset.index] = key;
-    this.setState({ [type]: category });
-  }; */
-
-  /*  addToArray = (item, array) => {
+  const addItem = (item, type) => {
     let obj = {
       start: 'Year',
       end: 'Year',
@@ -69,18 +62,23 @@ const App = () => {
       obj.company = 'Company';
       obj.title = 'Job Title';
     }
-    this.setState({
-      [array]: [...this.state[array], obj],
+    let array = values;
+    array[type].push(obj);
+    setValues({
+      ...array,
     });
   };
 
-  removeItem = (index, array) => {
-    this.setState({
-      [array]: this.state[array].filter((item) => {
-        return item !== this.state[array][index];
-      }),
+  const removeItem = (index, type) => {
+    let array = values;
+    let filteredType = array[type].filter((item) => {
+      return item !== array[type][index];
     });
-  }; */
+    array[type] = filteredType;
+    setValues({
+      ...array,
+    });
+  };
 
   return (
     <div className="App">
@@ -88,8 +86,8 @@ const App = () => {
       <Form
         values={values}
         handleInputChange={handleInputChange}
-        /*         addToArray={this.addToArray}
-        removeItem={this.removeItem} */
+        addItem={addItem}
+        removeItem={removeItem}
       />
       <CV values={values} />
     </div>
