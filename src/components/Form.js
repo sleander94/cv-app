@@ -17,13 +17,13 @@ const Form = ({ values, handleInputChange, addItem, removeItem }) => {
         addItem={addItem}
         removeItem={removeItem}
       />
-      {/*
-        <Education
-          education={this.props.education}
-          handleInputChange={this.props.handleInputChange}
-          addToArray={this.props.addToArray}
-          removeItem={this.props.removeItem}
-        /> */}
+
+      <Education
+        education={values.education}
+        handleInputChange={handleInputChange}
+        addItem={addItem}
+        removeItem={removeItem}
+      />
     </form>
   );
 };
