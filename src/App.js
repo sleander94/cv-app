@@ -1,22 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Form from './components/Form';
 import CV from './components/CV';
 import './styles/App.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      personal: [
-        {
-          name: 'John Smith',
-          email: 'johnsmith@email.com',
-          phone: '(555)555-5555',
-          address: 'City, ST',
-          description: 'Professional Title',
-        },
-      ],
-      work: [
+const App = () => {
+  const [values, setValues] = useState({
+    personal: [
+      {
+        name: 'John Smith',
+        email: 'johnsmith@email.com',
+        phone: '(555)555-5555',
+        address: 'City, ST',
+        description: 'Professional Title',
+      },
+    ],
+  });
+  /*       work: [
         {
           title: 'Software Developer',
           company: 'Awesome Company',
@@ -34,22 +33,30 @@ class App extends React.Component {
           description: 'Course description.',
         },
       ],
-    };
+    }; */
 
-    this.handleInputChange.bind(this);
+  /*     this.handleInputChange.bind(this);
     this.addToArray.bind(this);
     this.removeItem.bind(this);
-  }
+  } */
 
-  handleInputChange = (type) => (e) => {
+  const handleInputChange = (type) => (e) => {
+    let category = [...values[type]];
+    let key = { ...category[e.target.dataset.index] };
+    key[e.target.name] = e.target.value;
+    category[e.target.dataset.index] = key;
+    setValues({ [type]: category });
+  };
+
+  /*   handleInputChange = (type) => (e) => {
     let category = [...this.state[type]];
     let key = { ...category[e.target.dataset.index] };
     key[e.target.name] = e.target.value;
     category[e.target.dataset.index] = key;
     this.setState({ [type]: category });
-  };
+  }; */
 
-  addToArray = (item, array) => {
+  /*  addToArray = (item, array) => {
     let obj = {
       start: 'Year',
       end: 'Year',
@@ -73,22 +80,20 @@ class App extends React.Component {
         return item !== this.state[array][index];
       }),
     });
-  };
+  }; */
 
-  render() {
-    return (
-      <div className="App">
-        <h1>CV - Generator</h1>
-        <Form
-          {...this.state}
-          handleInputChange={this.handleInputChange}
-          addToArray={this.addToArray}
-          removeItem={this.removeItem}
-        />
-        <CV {...this.state} />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="App">
+      <h1>CV - Generator</h1>
+      <Form
+        values={values}
+        handleInputChange={handleInputChange}
+        /*         addToArray={this.addToArray}
+        removeItem={this.removeItem} */
+      />
+      <CV values={values} />
+    </div>
+  );
+};
 
 export default App;
