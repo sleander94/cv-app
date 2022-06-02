@@ -1,9 +1,8 @@
 import React from 'react';
 import '../styles/CV.css';
 
-class CV extends React.Component {
-  render() {
-    let work = [];
+const CV = ({ values }) => {
+  /*  let work = [];
     for (let i = 0; i < this.props.work.length; i++) {
       work.push(
         <div className="work" key={i}>
@@ -30,29 +29,26 @@ class CV extends React.Component {
           </div>
         </div>
       );
-    }
-    return (
-      <div className="CV">
-        <div className="personal">
-          <div className="name">{this.props.personal[0].name}</div>
-          <div className="email">{this.props.personal[0].email}</div>
-          <div className="phone">{this.props.personal[0].phone}</div>
-          <div className="address">{this.props.personal[0].address}</div>
-          <div className="description">
-            {this.props.personal[0].description}
-          </div>
-        </div>
-        <div className="workContainer">
+    } */
+  return (
+    <div className="CV">
+      <div className="personal">
+        <div className="name">{values.personal[0].name}</div>
+        <div className="email">{values.personal[0].email}</div>
+        <div className="phone">{values.personal[0].phone}</div>
+        <div className="address">{values.personal[0].address}</div>
+        <div className="description">{values.personal[0].description}</div>
+      </div>
+      {/*  <div className="workContainer">
           <h3>Work Experience</h3>
           {work}
         </div>
         <div className="educationContainer">
           <h3>Education</h3>
           {education}
-        </div>
-      </div>
-    );
-  }
-}
+        </div> */}
+    </div>
+  );
+};
 
 export default CV;
