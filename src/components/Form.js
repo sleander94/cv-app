@@ -4,17 +4,14 @@ import Work from './Work';
 import Education from './Education';
 import '../styles/Form.css';
 
-class Form extends React.Component {
-  render() {
-    return (
-      <form>
-        <Personal
-          personal={this.props.personal}
-          handleInputChange={this.props.handleInputChange}
-        />
-        <Work
+const Form = ({ values, handleInputChange }) => {
+  return (
+    <form>
+      <Personal values={values} handleInputChange={handleInputChange} />
+      {/*         <Work
           work={this.props.work}
-          handleInputChange={this.props.handleInputChange}
+          hand
+          leInputChange={this.props.handleInputChange}
           addToArray={this.props.addToArray}
           removeItem={this.props.removeItem}
         />
@@ -23,10 +20,9 @@ class Form extends React.Component {
           handleInputChange={this.props.handleInputChange}
           addToArray={this.props.addToArray}
           removeItem={this.props.removeItem}
-        />
-      </form>
-    );
-  }
-}
+        /> */}
+    </form>
+  );
+};
 
 export default Form;
