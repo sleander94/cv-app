@@ -11,3 +11,10 @@
 * {
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 600px) {
+  @viewport {
+    zoom: 0.81;
+    width: device-width;
+  }
+}
