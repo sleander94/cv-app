@@ -133,7 +133,7 @@
 @media screen and (min-width: 1080px) {
   .CV {
     grid-area: 2 / 2 / 3 / 3;
-    min-width: 0;
+    min-width: 480px;
     width: 40vw;
     height: calc(40vw * 1.294);
   }
