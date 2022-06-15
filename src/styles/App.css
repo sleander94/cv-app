@@ -1,8 +1,7 @@
 .App {
   display: grid;
-  grid-template-rows: 150px 1fr 1fr 150px;
   justify-items: center;
-  gap: 18px;
+  gap: 12px;
   width: 100vw;
 }
 
@@ -16,7 +15,7 @@
 @media screen and (min-width: 1080px) {
   .App {
     display: grid;
-    grid: 150px 1fr 150px / 1fr 1fr;
+    grid: 1fr / 1fr 1fr;
     max-width: 95vw;
   }
 
