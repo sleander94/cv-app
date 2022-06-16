@@ -27,7 +27,7 @@ const PDFConverter = ({ target }) => {
   };
 
   return (
-    <button className="PDFConverter" onClick={() => getPDF()}>
+    <button className="PDFConverter" type="button" onClick={() => getPDF()}>
       Download PDF
     </button>
   );
