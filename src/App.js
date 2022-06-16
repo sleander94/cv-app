@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Form from './components/Form';
 import CV from './components/CV';
+import PDFConverter from './components/PDFConverter';
 import './styles/App.css';
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
         name: 'John Smith',
         email: 'johnsmith@email.com',
         phone: '(555)555-5555',
-        address: 'City, ST',
+        address: 'City ST',
         description: 'Professional Title',
       },
     ],
@@ -82,6 +83,7 @@ const App = () => {
         addItem={addItem}
         removeItem={removeItem}
       />
+      <PDFConverter target="CV" />
       <CV values={values} />
     </div>
   );
