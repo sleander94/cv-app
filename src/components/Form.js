@@ -33,7 +33,7 @@ const Form = ({ values, handleInputChange, addItem, removeItem }) => {
     }
   };
   return (
-    <form>
+    <form id="form">
       <Personal
         personal={values.personal}
         handleInputChange={handleInputChange}

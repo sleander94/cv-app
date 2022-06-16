@@ -29,7 +29,7 @@ const CV = ({ values }) => {
     );
   }
   return (
-    <div className="CV">
+    <div id="CV" className="CV">
       <div className="personal">
         <div className="name">{values.personal[0].name}</div>
         <div className="email">{values.personal[0].email}</div>
