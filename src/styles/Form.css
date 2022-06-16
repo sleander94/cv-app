@@ -45,7 +45,16 @@ label {
 button {
   grid-column: 1 / 2;
   max-width: 75px;
+  color: black;
   border: 1px solid black;
+}
+
+@media screen and (max-width: 600px) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1080px) {
