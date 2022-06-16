@@ -1,5 +1,6 @@
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import '../styles/PDFConverter.css';
 
 const PDFConverter = ({ target }) => {
   const getPDF = () => {
