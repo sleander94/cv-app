@@ -2,6 +2,7 @@ import React from 'react';
 import Personal from './Personal';
 import Work from './Work';
 import Education from './Education';
+import PDFConverter from './PDFConverter';
 import '../styles/Form.css';
 
 const Form = ({ values, handleInputChange, addItem, removeItem }) => {
@@ -51,6 +52,7 @@ const Form = ({ values, handleInputChange, addItem, removeItem }) => {
         removeButton={removeButton}
         addButtonAtEnd={addButtonAtEnd}
       />
+      <PDFConverter target="CV" />
     </form>
   );
 };

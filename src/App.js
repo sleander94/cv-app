@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Form from './components/Form';
 import CV from './components/CV';
-import PDFConverter from './components/PDFConverter';
 import './styles/App.css';
 
 const App = () => {
@@ -83,7 +82,6 @@ const App = () => {
         addItem={addItem}
         removeItem={removeItem}
       />
-      <PDFConverter target="CV" />
       <CV values={values} />
     </div>
   );
