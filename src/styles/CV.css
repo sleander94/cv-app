@@ -3,8 +3,12 @@
   min-width: 95vw;
   height: calc(95vw * 1.294);
   padding: 1.5rem;
-  border: 1px solid rgb(156, 156, 156);
-  box-shadow: 0px 0px 10px;
+  border: 2px solid rgb(0, 0, 0);
+  color: white;
+}
+
+.CV * {
+  color: black;
 }
 
 .CV .personal {
@@ -130,11 +134,14 @@
   }
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 900px) {
   .CV {
     grid-area: 2 / 2 / 3 / 3;
-    min-width: 480px;
+    min-width: 525px;
     width: 40vw;
+    max-width: 800px;
+    min-height: 679.35px;
     height: calc(40vw * 1.294);
+    max-height: 1035.2px;
   }
 }
