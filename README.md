@@ -1,5 +1,9 @@
 # CV-Generator App
 
+<p align="center" width="100%">
+    <img width="50%" src="https://media.giphy.com/media/azZLDUUBmeo4XRXxu6/giphy.gif" alt="desktop demo gif">
+</p>
+
 [Live Demo](https://sleander94.github.io/cv-app/) 👈
 
 Created with React
