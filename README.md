@@ -1,21 +1,31 @@
-# CV-Generator App
+# CV Generator
 
-<p align="center" width="100%">
-    <img width="50%" src="https://media.giphy.com/media/azZLDUUBmeo4XRXxu6/giphy.gif" alt="desktop demo gif">
+## Live Demo: [sleander94.github.io/cv-app](https://sleander94.github.io/cv-app/)  
+
+<p align="left" width="100%">
+    <img width="60%" src="/public/images/cvgeneratordesktop.png" alt="desktop preview">
+</p>
+<hr>
+<p align="left" width="100%">
+    <img width="60%" src="https://media.giphy.com/media/azZLDUUBmeo4XRXxu6/giphy.gif" alt="desktop demo gif">
 </p>
 
-[Live Demo](https://sleander94.github.io/cv-app/) 👈
-
-Created with React
-
-Originally written with class components.
-
-Rewritten with functional components.
+Generate and download a customized CV.
 
 ## Features
 
-Input information to customize live preview of CV
+- View live preview of CV, updated with user input
+- Add and remove work experience and education entries
+- Download copy of CV using html2canvas and jspdf
 
-Add & remove work experience / education
+## Technologies Used
 
-Download PDF 
+- React
+- Javascript
+- CSS
+
+## Author
+
+Stephen Leander
+
+[stephenleander.dev](https://stephenleander.dev)
